@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Inter, sans-serif;
+    font-family: "Nunito", sans-serif;
     background: #000;
     color: white;
     overflow-x: hidden;
@@ -80,7 +80,8 @@ body {
 
 h1 {
     font-size: 60px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Marck Script", "Cormorant Garamond", serif;
+    font-weight: 400;
 }
 
 button {
@@ -90,6 +91,8 @@ button {
     border: none;
     background: #ff4d79;
     color: white;
+    font: inherit;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -102,28 +105,41 @@ button {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px;
+    padding: 40px clamp(14px, 5vw, 40px);
 }
 
 .counter {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(8px, 3vw, 20px);
+    width: min(100%, 540px);
     margin-top: 40px;
 }
 
 .item {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1;
     background: rgba(255,255,255,0.05);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 20px;
+    padding: 8px 4px;
+    border-radius: clamp(14px, 4vw, 20px);
 }
 
 .item span {
-    font-size: 40px;
+    font-size: clamp(28px, 10vw, 40px);
+    line-height: 1;
     color: #ff4d79;
+}
+
+.item small {
+    font-size: clamp(11px, 3.2vw, 13px);
+}
+
+.counter-section .subtitle {
+    margin-top: 28px;
 }
 
 /* ===== TIMELINE ===== */
@@ -192,6 +208,8 @@ button {
 .letter h2 {
     font-size: 48px;
     margin-bottom: 40px;
+    font-family: "Marck Script", "Cormorant Garamond", serif;
+    font-weight: 400;
 }
 
 .letter-card {
@@ -280,6 +298,7 @@ button {
     color: #ccc;
 }
 .footer {
+    position: relative;
     min-height: 60vh;
     display: flex;
     justify-content: center;
@@ -287,12 +306,29 @@ button {
     text-align: center;
 
     padding: 60px 20px;
-    background: radial-gradient(circle at top, rgba(255,77,121,0.15), transparent 60%);
+    overflow: visible;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    inset: -28vh 0 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to bottom, transparent 0%, rgba(18, 9, 24, 0.45) 28%, rgba(8, 7, 16, 0.2) 100%),
+        radial-gradient(ellipse at center 58%, rgba(255,77,121,0.14), transparent 68%);
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content h2 {
     font-size: 52px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Marck Script", "Cormorant Garamond", serif;
+    font-weight: 400;
     margin-bottom: 20px;
     color: #fff;
 }
