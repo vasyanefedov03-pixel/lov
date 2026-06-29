@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Для моей любимой ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="stars"></div>
+<canvas id="constellations"></canvas>
+
+<section class="hero">
+    <div class="overlay"></div>
+
+    <img src="assets/images/firstdate.jpg" class="hero-image">
+
+    <div class="content">
+        <div class="heart">❤</div>
+        <h1>Для самой любимой</h1>
+        <p>Полтора года назад началась лучшая история моей жизни.</p>
+
+        <button id="start">Начать нашу историю</button>
+    </div>
+</section>
+
+<section class="photo">
+    <h2>Мы ❤️</h2>
+
+    <div class="photo-card hidden">
+        <img src="assets/images/firsphoto.jpg" alt="Мы вместе">
+        <p>Наше первое селфи</p>
+    </div>
+</section>
+
+<section class="counter-section">
+    <h2>Мы вместе уже</h2>
+
+    <div class="counter">
+        <div class="item"><span id="days">0</span><small>дней</small></div>
+        <div class="item"><span id="hours">0</span><small>часов</small></div>
+        <div class="item"><span id="minutes">0</span><small>минут</small></div>
+        <div class="item"><span id="seconds">0</span><small>секунд</small></div>
+    </div>
+
+    <p class="subtitle">И я всё ещё выбираю тебя каждый день ❤️</p>
+</section>
+
+
+<section class="timeline">
+    <h2>Наша история</h2>
+
+    <div class="timeline-line">
+
+        <div class="event left hidden">
+            <div class="card">
+                <span class="date">Глава I</span>
+                <h3>Знакомство</h3>
+                <p>22 февраля 2021 — начало нашей истории.</p>
+            </div>
+        </div>
+
+        <div class="event right hidden">
+            <div class="card">
+                <span class="date">Глава II</span>
+                <h3>Начало нас</h3>
+                <p>31 декабря 2024 — мы стали “мы”.</p>
+            </div>
+        </div>
+
+        <div class="event left hidden">
+            <div class="card">
+                <span class="date">Глава III</span>
+                <h3>Моменты</h3>
+                <p>Все маленькие и важные события.</p>
+            </div>
+        </div>
+
+        <div class="event right hidden">
+            <div class="card">
+                <span class="date">Глава IV</span>
+                <h3>И дальше</h3>
+                <p>История продолжается.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="letter hidden">
+    <h2>Если коротко</h2>
+
+    <div class="letter-card">
+        <p>
+            Я не знаю, что будет дальше, но я знаю одно —  
+            я выбираю тебя каждый день.
+        </p>
+
+        <p>
+            Всё, что между нами было — это не случайность.  
+            И всё, что будет — тоже нет.
+        </p>
+
+        <p class="signature">
+            ❤️
+        </p>
+    </div>
+</section>
+<footer class="footer hidden">
+    <div class="footer-content">
+        <h2>Люблю тебя, Ириночка ❤️</h2>
+        <p>Это только начало нашей истории</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
